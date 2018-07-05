@@ -1,0 +1,49 @@
+<div style="margin-left: 20px;">
+  <h1>Show Podcast</h1>
+
+  <p>
+    <strong>Episode Name:</strong>
+    <%= @podcast.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @podcast.description %>
+  </p>
+
+  <p>
+    <strong>Date:</strong>
+    <%= @podcast.date && @podcast.date.strftime("Telecast on %m/%d/%Y") %>
+  </p>
+
+  <p>
+    <strong>Paywall:</strong>
+    <%= @podcast.paywall %>
+  </p>
+   
+  <p>
+    <strong>Audio:</strong>
+    <% if @podcast.audio.present? %>
+      <%= audio_tag(@podcast.audio, autoplay: false, controls: true) %>
+    <% else %>
+      <strong> File uploading in-process... </strong>
+    <% end %>
+  </p>
+
+</div>
+
+<script type="text/javascript">
+  setInterval(function () {
+    reloadPodcast()
+  }, 60000);
+
+  function reloadPodcast(){
+    $.ajax({
+      type: "GET",
+      url: "<%= podcast_path(@podcast.id) %>",
+      success : function() {
+        location.reload();
+      }
+    });
+  }
+</script>
