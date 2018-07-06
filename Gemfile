@@ -64,3 +64,6 @@ gem 'active_model_serializers'
 gem "mini_magick"
 gem 'fog-aws'
 gem "bootstrap-sass-rails", "~> 2.2.2.0"
+# For background jobs
+gem 'sidekiq'
+
