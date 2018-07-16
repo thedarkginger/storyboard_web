@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
    root 'pages#home'
-   
+   get "privacy" => "pages#privacy"
 
 
   # Example of regular route:
