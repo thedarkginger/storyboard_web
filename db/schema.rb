@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181115033256) do
+ActiveRecord::Schema.define(version: 20181115064330) do
 
   create_table "beta", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20181115033256) do
     t.string   "expected_number_listeners"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.string   "plan"
   end
 
 end

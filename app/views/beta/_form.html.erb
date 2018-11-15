@@ -25,6 +25,10 @@
     <%= f.label "How many listeners do you expect?" %><br>
     <%= f.text_field :expected_number_listeners, class: "form-control" %>
   </div>
+    <div class="field">
+    <%= f.label "Can you tell us anything about your team or how you would plan to podcast?" %><br>
+    <%= f.text_field :plan, class: "form-control" %>
+  </div>
   <div class="actions">
     <%= f.submit "Apply for Beta", class: "btn btn-primary btn-lg" %>
   </div>

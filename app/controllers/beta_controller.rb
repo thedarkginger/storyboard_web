@@ -69,6 +69,6 @@ class BetaController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def betum_params
-      params.require(:betum).permit(:name, :email, :expected_number_listeners)
+      params.require(:betum).permit(:name, :email, :expected_number_listeners, :plan)
     end
 end
