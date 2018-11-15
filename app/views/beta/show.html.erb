@@ -1,0 +1,23 @@
+<div class="container">
+
+	<p id="notice"><%= notice %></p>
+
+	<p>
+	  <strong>Name:</strong>
+	  <%= @betum.name %>
+	</p>
+
+	<p>
+	  <strong>Email:</strong>
+	  <%= @betum.email %>
+	</p>
+
+	<p>
+	  <strong>Expected number listeners:</strong>
+	  <%= @betum.expected_number_listeners %>
+	</p>
+
+	<%= link_to 'Edit', edit_betum_path(@betum) %> |
+	<%= link_to 'Back', root_path %>
+
+</div>
