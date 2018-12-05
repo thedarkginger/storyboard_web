@@ -21,6 +21,12 @@ nav img {
 	width: 20% !important;;
 }
 
+@media only screen and (max-width: 768px) {
+  .jumbotron {
+    width: 95%; 
+  }
+}
+
 .jumbotron {
 	background-color: #FFB277;
 }
@@ -44,6 +50,11 @@ nav img {
       display: none;
    }
 }
+
+form input[type='text'] {
+   height: 50px;
+ }
+
 
 /* Wrapper for page content to push down footer */
 #wrap {
